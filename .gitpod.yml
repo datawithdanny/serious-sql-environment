@@ -1,0 +1,11 @@
+tasks:
+  - init: |
+      docker-compose pull
+  - command: |
+      docker-compose up
+
+ports:
+  - name: SQLPad
+    port: 3000
+    description: The main SQLPad interface
+    onOpen: open-browser
