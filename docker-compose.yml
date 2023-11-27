@@ -2,13 +2,13 @@ version: '3.8'
 
 services:
   db:
-    image: dannyma/psql-docker:1.0.14
+    image: dannyma/psql-docker:latest
     environment:
       POSTGRES_HOST_AUTH_METHOD: "trust"
     shm_size: 1gb
 
   sqlpad:
-    image: sqlpad/sqlpad:5.5
+    image: sqlpad/sqlpad:7.1.3
     depends_on:
       - db
     ports:
